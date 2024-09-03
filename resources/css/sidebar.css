@@ -1,0 +1,30 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.sidebar-items a {
+    max-height: 2rem;
+}
+
+.main {
+    height: 100vh;
+    /* Enable Y Scroll */
+    overflow-y: auto;
+    /*END*/
+    padding: 1rem;
+    flex: 1;
+}
+
+.sidebar {
+    flex: 1;
+    height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
