@@ -95,28 +95,28 @@ export const Navigation = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link
+                                        <a
                                             className="dropdown-item"
                                             href="/react"
                                         >
                                             Learn REACT
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link
+                                        <a
                                             className="dropdown-item"
                                             href="/inertia"
                                         >
                                             Learn INERTIA
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link
+                                        <a
                                             className="dropdown-item"
                                             href="/laravel"
                                         >
                                             Learn LARAVEL
-                                        </Link>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>

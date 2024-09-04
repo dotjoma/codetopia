@@ -16,8 +16,8 @@ const Installation = () => {
         window.location.reload();
     };
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText("laravel new example-app");
+    const handleCopy = ({ text }) => {
+        navigator.clipboard.writeText(text);
         Swal.fire({
             icon: "success",
             title: "Copied!",
@@ -147,27 +147,185 @@ const Installation = () => {
                 {isSecondColumnVisible && (
                     <div className="main col p-3">
                         <div className="col">
-                            <h1>Installation of React, Inertia and Laravel</h1>
-                            <div
-                                className="card p-3 rounded-3"
-                                style={{ position: "relative" }}
-                            >
-                                <div className="card-body text-white bg-primary d-flex flex-column flex-md-row align-items-center">
-                                    <p className="fw-bold fs-4 mb-3 mb-md-0">
-                                        laravel new example-app
-                                    </p>
-                                    <button
-                                        onClick={handleCopy}
-                                        className="ms-md-auto"
-                                        style={{
-                                            background: "none",
-                                            border: "none",
-                                            color: "#fff",
-                                            cursor: "pointer",
-                                        }}
-                                    >
-                                        <FaCopy size={20} />
-                                    </button>
+                            <h3 className="mb-4">
+                                Installation of React, Inertia and Laravel
+                            </h3>
+                            <div className="mb-4">
+                                you may create a new Laravel project via
+                                Composer's create-project command:
+                                <div
+                                    className="card p-3 rounded-3"
+                                    style={{ position: "relative" }}
+                                >
+                                    <div className="card-body text-white bg-primary d-flex flex-column flex-md-row align-items-center rounded-3">
+                                        <p
+                                            className="fw-bold  fs-md-3 fs-lg-2 mb-3 mb-md-0"
+                                            id="nonGlobalInstallation"
+                                        >
+                                            composer create-project
+                                            laravel/laravel example-app
+                                        </p>
+                                        <button
+                                            onClick={() =>
+                                                handleCopy({
+                                                    text: document.getElementById(
+                                                        "nonGlobalInstallation"
+                                                    ).innerText,
+                                                })
+                                            }
+                                            className="ms-md-auto"
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                color: "#fff",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            <FaCopy size={20} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mb-4">
+                                Or, you may create new Laravel projects by
+                                globally installing the Laravel installer via
+                                Composer. The Laravel installer allows you to
+                                select your preferred testing framework,
+                                database, and starter kit when creating new
+                                applications:
+                                <div
+                                    className="card p-3 rounded-3"
+                                    style={{ position: "relative" }}
+                                >
+                                    <div className="card-body text-white bg-primary d-flex flex-column flex-md-row align-items-center rounded-3">
+                                        <p
+                                            className="fw-bold  fs-md-3 fs-lg-2 mb-3 mb-md-0"
+                                            id="globalInstallation"
+                                        >
+                                            laravel new example-app
+                                        </p>
+                                        <button
+                                            onClick={() =>
+                                                handleCopy({
+                                                    text: document.getElementById(
+                                                        "globalInstallation"
+                                                    ).innerText,
+                                                })
+                                            }
+                                            className="ms-md-auto"
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                color: "#fff",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            <FaCopy size={20} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mb-4">
+                                Once the project has been created, go to the app
+                                directory by using:{" "}
+                                <span className="fw-bold">cd example-app</span>
+                                <div
+                                    className="card p-3 rounded-3"
+                                    style={{ position: "relative" }}
+                                >
+                                    <div className="card-body text-white bg-primary d-flex flex-column flex-md-row align-items-center mb-2 rounded-3">
+                                        <p
+                                            className="fw-bold  fs-md-3 fs-lg-2 mb-3 mb-md-0"
+                                            id="installReact-React-Dom"
+                                        >
+                                            npm install react react-dom
+                                        </p>
+                                        <button
+                                            onClick={() =>
+                                                handleCopy({
+                                                    text: document.getElementById(
+                                                        "installReact-React-Dom"
+                                                    ).innerText,
+                                                })
+                                            }
+                                            className="ms-md-auto"
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                color: "#fff",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            <FaCopy size={20} />
+                                        </button>
+                                    </div>
+
+                                    <div className="card-body text-white bg-primary d-flex flex-column flex-md-row align-items-center rounded-3">
+                                        <p
+                                            className="fw-bold  fs-md-3 fs-lg-2 mb-3 mb-md-0"
+                                            id="installViteJs-Plugin-React"
+                                        >
+                                            npm install save-dev
+                                            @vitejs/plugin-react
+                                        </p>
+                                        <button
+                                            onClick={() =>
+                                                handleCopy({
+                                                    text: document.getElementById(
+                                                        "installViteJs-Plugin-React"
+                                                    ).innerText,
+                                                })
+                                            }
+                                            className="ms-md-auto"
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                color: "#fff",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            <FaCopy size={20} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mb-4">
+                                Time to install{" "}
+                                <span className="fw-bold fs-5">Inertia</span>
+                                <div
+                                    className="card p-3 rounded-3"
+                                    style={{ position: "relative" }}
+                                >
+                                    <div className="card-body text-white bg-primary d-flex flex-column flex-md-row align-items-center rounded-3">
+                                        <p
+                                            className="fw-bold  fs-md-3 fs-lg-2 mb-3 mb-md-0"
+                                            id="InertiaInstallation"
+                                        >
+                                            composer require
+                                            inertiajs/inertia-laravel
+                                        </p>
+                                        <button
+                                            onClick={() =>
+                                                handleCopy({
+                                                    text: document.getElementById(
+                                                        "InertiaInstallation"
+                                                    ).innerText,
+                                                })
+                                            }
+                                            className="ms-md-auto"
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                color: "#fff",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            <FaCopy size={20} />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
